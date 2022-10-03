@@ -1,0 +1,14 @@
+<!-- <h1>title: {{ temp.title }}</h1> -->
+
+<div *ngIf="noticia.title">
+  <div>
+    <h3>{{ noticia.title }}</h3>
+    <img class="newsImage" src="{{ noticia.urlToImage }}" alt="{{ noticia.title }}" />
+    <p>{{ noticia.description }}</p>
+    <a href="{{ noticia.url }}" target="_blank">See more</a>
+  </div>
+</div>
+
+<br />
+
+<button (click)="clearNoticia()">Clear Search</button>
