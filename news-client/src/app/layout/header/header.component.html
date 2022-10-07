@@ -1,4 +1,7 @@
-<p>header works!</p>
-
-<a routerLink="home">Inicio| </a>
-<a routerLink="noticias">Ver noticias</a>
+<header>
+  <div class="navbar">
+    <a class="navItem" routerLink="home">Inicio |</a>
+    <a class="navItem" routerLink="noticias"> Ver noticias |</a>
+    <a class="navItem"> Favoritos: {{ favoritos }}</a>
+  </div>
+</header>

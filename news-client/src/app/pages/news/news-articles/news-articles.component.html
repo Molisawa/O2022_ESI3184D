@@ -4,7 +4,16 @@
   <ul>
     <li [ngClass]="{ active: current == e }" *ngFor="let e of articles">
 
-      <a (click)="selectNoticia(e)">{{ e.title }}</a>
+      <!-- <a (click)="selectNoticia(e)">{{ e.title }}</a> -->
+      <input
+      (click)="actualizarFavoritos(e.favorito)"
+      type="checkbox"
+      [(ngModel)]="e.favorito"
+    />
+    <!-- <label for="heart">❤</label> -->
+    <!-- <input type="hidden" name="el_campo">
+    <div></div> -->
+    <a (click)="selectNoticia(e)" [routerLink]="e.title">{{ e.title }}</a>
 
     </li>
 
