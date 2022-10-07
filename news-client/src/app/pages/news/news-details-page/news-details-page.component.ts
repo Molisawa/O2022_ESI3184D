@@ -33,8 +33,7 @@ export class NewsDetailsPageComponent implements OnInit {
     this.noticia = this.newsService.getCurrentNoticia();
     // console.log('current notice', this.noticia);
     if (this.title !== this.noticia.title) {
-      // alert('Bad request mate');
-      //falta de redirigir al usuario
+
       this.router.navigate(['/noticias']);
     }
     //investigar como pasar parametros por boton y por local y disparar la búsqueda

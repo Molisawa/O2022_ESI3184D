@@ -8,10 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class NewsArticlesComponent implements OnInit {
   @Input() articles: any = [];
   @Input() current: any = {};
-  favorito: number = 0;
 
   constructor() {}
-
+  favorito: number = 0;
   @Output() news: EventEmitter<Object> = new EventEmitter();
 
   actualizarFavoritos(checkbox: any) {
@@ -20,7 +19,9 @@ export class NewsArticlesComponent implements OnInit {
 
   selectNoticia(noticia: any) {
     this.current = noticia;
+
     this.news.emit(noticia);
+
   }
   ngOnInit(): void {}
 }

@@ -1,9 +1,11 @@
 .navbar {
-  background-color: #ffe3e1;
+  background-color: aquamarine;
   overflow: hidden;
 }
 .navItem {
   font-size: 2em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: oblique;
 }
+.favorites {
+  float: right;
+}
+
