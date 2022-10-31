@@ -1,0 +1,13 @@
+<div>
+  <a routerLink="..">Regresar</a>
+</div>
+<div>
+  <h3>{{ noticia.title }}</h3>
+  <img
+    class="newsImage"
+    src="{{ noticia.urlToImage }}"
+    alt="{{ noticia.title }}"
+  />
+  <p>{{ noticia.description }}</p>
+  <a href="{{ noticia.url }}" target="_blank">See more</a>
+</div>

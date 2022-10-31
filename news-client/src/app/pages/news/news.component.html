@@ -1,8 +1,14 @@
 <p>Listado de Noticias</p>
+
 <br />
 
 <form (submit)="buscar()">
-  <input type="text" name="buscar" placeholder="Buscar..." [(ngModel)]="search" />
+  <input
+    type="text"
+    name="buscar"
+    placeholder="Buscar..."
+    [(ngModel)]="search"
+  />
   <button [disabled]="!search">Buscar</button>
 </form>
 
@@ -10,10 +16,16 @@
 <h2>Resultados de: {{ lastSearch | myUpperCase }}</h2>
 <div class="panel">
   <div>
-    <app-news-articles [articles]="noticias" (news)="selectNoticia($event)" [current]="current">
-    </app-news-articles>
+    <app-news-articles
+      [articles]="noticias"
+      (news)="selectNoticia($event)"
+      [current]="current"
+    ></app-news-articles>
   </div>
   <div>
-    <app-news-details [item]="current" (onClear)="clearCurrent()"></app-news-details>
+    <app-news-details
+      [item]="current"
+      (onClear)="clearCurrent()"
+    ></app-news-details>
   </div>
 </div>
