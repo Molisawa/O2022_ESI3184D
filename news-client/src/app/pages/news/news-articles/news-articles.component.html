@@ -1,0 +1,12 @@
+<p>noticias-articles works!</p>
+
+<div>
+  <ul>
+    <li [ngClass]="{ active: current == e }" *ngFor="let e of articles">
+
+      <a (click)="selectNoticia(e)">{{ e.title }}</a>
+
+    </li>
+
+  </ul>
+</div>
